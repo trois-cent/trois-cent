@@ -1,0 +1,151 @@
+@use 'tailwindcss';
+
+:root {
+    // colors
+    --background: #ffffff;
+    --foreground: #171717;
+
+    --accent: #ff3232;
+    --white: #ffffff;
+    --off-white: #ededed;
+
+    --black: #171717;
+
+    // dimensions
+    --grid-gap: 16px;
+    --gutter: 20px;
+
+    // radius
+    --radius-sm: 4px;
+    --radius-md: 8px;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-accent: var(--accent);
+    --color-white: var(--white);
+    --color-off-white: var(--off-white);
+    --color-black: var(--black);
+    --spacing-gutter: var(--gutter);
+    --spacing-grid-gap: var(--grid-gap);
+    --font-sans: var(--font-manrope);
+    --font-mono: var(--font-geist-mono);
+    --rounded-sm: 4px;
+    --rounded-md: 8px;
+    --rounded-lg: 12px;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: 'Manrope', Arial, Helvetica, sans-serif;
+}
+
+.cont {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+    padding-inline: var(--gutter);
+}
+
+.tag {
+    width: max-content;
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: var(--off-white);
+    border-radius: 4px;
+    color: var(--black);
+
+    font-family: 'Manrope';
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &.small {
+        font-size: 10px;
+        padding: 3px 8px;
+        border-radius: 3px;
+    }
+
+    &.accent {
+        background-color: var(--accent);
+        color: var(--white);
+    }
+    &.black {
+        background-color: var(--black);
+        color: var(--white);
+    }
+}
+
+.section-title {
+    color: var(--black);
+
+    font-family: 'Manrope';
+    font-size: 64px;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1.15em;
+
+    // tablets
+    @media screen and (max-width: 1200px) {
+        font-size: 48px;
+    }
+    // phone
+    @media screen and (max-width: 600px) {
+        font-size: 36px;
+
+        span::after {
+            display: none !important;
+        }
+    }
+
+    span {
+        position: relative;
+        display: block;
+        width: max-content;
+        max-width: 100%;
+        color: var(--black);
+
+        &::after {
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+
+            display: block;
+            content: '';
+            width: 100%;
+            height: 4px;
+            background-color: var(--black);
+        }
+    }
+}
+
+h3 {
+    font-family: 'Manrope';
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1.15em;
+
+    // phone
+    @media screen and (max-width: 600px) {
+        font-size: 28px;
+    }
+}
+
+.impact-text {
+    font-size: min(12vh, 10vw);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1.15em;
+    text-transform: uppercase;
+}

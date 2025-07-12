@@ -1,0 +1,55 @@
+{
+    "sectionTitles": {
+        "services": {
+            "tag": "Services",
+            "0": "De l'idée au lancement",
+            "1": "on est avec toi."
+        },
+        "projects": {
+            "tag": "Projets",
+            "0": "Petits et gros projets,",
+            "1": "on donne notre 300%."
+        },
+        "contacts": {
+            "tag": "Contacts",
+            "0": "Prêt à commencer ?"
+        }
+    },
+    "branding": {
+        "name": "Branding",
+        "shortDesc": "Logo, branding, contenu -- tout ce dont votre marque a besoin pour s’établir et grandir."
+    },
+    "design": {
+        "name": "Design UX/UI",
+        "shortDesc": "Des interfaces qui captent l’attention, guident l’action et maximisent les résultats. "
+    },
+    "development": {
+        "name": "Solutions digitales",
+        "shortDesc": "Sites vitrines, e-commerce, applications web et mobiles -- on bâti la plateforme qui convertit vos visiteurs en clients."
+    },
+    "goals": {
+        "creation": "Création",
+        "growth": "Croissance",
+        "optimization": "Optimisation",
+        "firstStep": "On établit les objectifs.",
+        "secondStep": "On les réalise."
+    },
+    "copyrights": {
+        "text": "© 2025 - Trois Cent, s.e.n.c. Tous droits réservés.",
+        "from": "Basé au Québec. Ouvert à l'international.",
+        "legal": "Mentions légales",
+        "cookies": "Gestion des cookies"
+    },
+    "cedres-3r": {
+        "name": "Cèdres 3R",
+        "tags": "Branding,UX/UI"
+    },
+    "jo-barber": {
+        "name": "Jo Barber",
+        "tags": "Branding"
+    },
+    "athlete-x": {
+        "name": "Athlete-X",
+        "tags": "Branding,UX/UI,Web App"
+    }
+}

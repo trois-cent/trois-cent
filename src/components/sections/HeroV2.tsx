@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import gsap from 'gsap'
 import { Button } from '../ui/buttons/button'
 import { ArrowRight } from 'lucide-react'

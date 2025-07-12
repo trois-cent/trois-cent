@@ -1,5 +1,5 @@
-import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import React from 'react'
 
 const Footer = () => {
@@ -15,7 +15,7 @@ const Footer = () => {
                         </a>
                         <button className="font-mono text-[18px] text-accent text-left">Instagram</button>
                     </div>
-                    <img src="/jb_01.png" className="h-[350px] aspect-[1/1] rounded-lg bg-off-white object-cover" />
+                    <Image src="/jb_01.png" fill alt='boooombooooclat' className="h-[350px] aspect-[1/1] rounded-lg bg-off-white object-cover" />
 
                     <div className="col-start-12 flex flex-col justify-end items-end">
                         <button className="font-mono text-[18px] text-accent text-left">en</button>

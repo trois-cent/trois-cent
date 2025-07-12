@@ -1,6 +1,5 @@
 import { FC, ReactNode } from 'react'
 import './styles.scss'
-import { ArrowRight } from 'lucide-react'
 
 type ButtonProps = {
     text: string

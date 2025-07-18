@@ -4,8 +4,16 @@ import { useEffect } from 'react'
 import gsap from 'gsap'
 import { Button } from '../ui/buttons/button'
 import { ArrowRight } from 'lucide-react'
+import { useLenis } from 'lenis/react'
 
 const HeroV2 = () => {
+    const lenis = useLenis()
+
+    const jumpTo = (section: 'projects' | 'services') => {
+        if (lenis) lenis.scrollTo(`#${section}`, { duration: 1.15, lerp: 0.15 })
+        else console.log(lenis)
+    }
+
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'instant' })
 
@@ -17,6 +25,7 @@ const HeroV2 = () => {
             delay: 0.25,
         })
         tl.set('#grey-bg', { opacity: 1 }, 0)
+        tl.set('.hero__content', { opacity: 1 }, 0)
         tl.fromTo(
             '#grey-bg .logo-letter',
             {
@@ -115,7 +124,7 @@ const HeroV2 = () => {
     return (
         <section
             id="hero"
-            className="relative w-full h-[100vh] p-5 flex flex-col-reverse items-center justify-center portrait:justify-between portrait:items-end"
+            className="relative w-full h-[100vh] portrait:h-[100dvh] p-5 flex flex-col-reverse items-center justify-center portrait:justify-between portrait:items-end"
         >
             <div className="w-full h-full portrait:aspect-square portrait:h-[unset] flex items-center justify-center">
                 <div
@@ -186,7 +195,7 @@ const HeroV2 = () => {
                     </h1>
                 </div>
             </div>
-            <div className="hero__content landscape:absolute z-10 left-0 bottom-0 portrait:bottom-[unset] portrait:top-0 w-full landscape:p-10 flex portrait:flex-col  portrait:flex-grow portrait:pb-2 items-center landscape:items-end justify-between ">
+            <div className="hero__content opacity-0 landscape:absolute z-10 left-0 bottom-0 portrait:bottom-[unset] portrait:top-0 w-full landscape:p-10 flex portrait:flex-col  portrait:flex-grow portrait:pb-2 items-center landscape:items-end justify-between ">
                 <svg
                     className="w-1/3 portrait:w-full"
                     viewBox="0 0 1566 214"
@@ -246,8 +255,18 @@ const HeroV2 = () => {
                 </svg>
 
                 <div className="flex flex-wrap items-center gap-1.5">
-                    <Button className="hero-button opacity-0" variant="off-white" text="Services" />
-                    <Button className="hero-button opacity-0 portrait:hidden" variant="off-white" text="Projets" />
+                    <Button
+                        className="hero-button opacity-0"
+                        variant="off-white"
+                        text="Services"
+                        onClick={() => jumpTo('services')}
+                    />
+                    <Button
+                        className="hero-button opacity-0 portrait:hidden"
+                        variant="off-white"
+                        text="Projets"
+                        onClick={() => jumpTo('projects')}
+                    />
                     <Button
                         className="hero-button opacity-0"
                         variant="accent"

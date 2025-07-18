@@ -5,13 +5,20 @@ import { motion } from 'framer-motion'
 import { Logo } from '../ui/logo'
 import { SplitText } from '../ui/split-text'
 import { useTranslations } from 'next-intl'
+import { useLenis } from 'lenis/react'
 
 export const Hero = () => {
     const t = useTranslations()
+    const lenis = useLenis()
 
     useLayoutEffect(() => {
         window.scrollTo({ top: 0, behavior: 'instant' })
     }, [])
+
+    const jumpTo = (section: 'projects' | 'services') => {
+        if (lenis) lenis.scrollTo(`#${section}`, { duration: 1, easing: t => t * (2 - t) })
+        else console.log(lenis)
+    }
 
     return (
         <section id="hero" className="w-full h-[100vh] p-5">
@@ -51,6 +58,7 @@ export const Hero = () => {
                                         transition: { duration: 0.75, ease: [0.19, 1, 0.22, 1], delay: 0.7 },
                                     }}
                                     className="tag"
+                                    onClick={() => jumpTo('services')}
                                 >
                                     {t('buttons.services')}
                                 </motion.button>
@@ -62,6 +70,7 @@ export const Hero = () => {
                                         transition: { duration: 0.75, ease: [0.19, 1, 0.22, 1], delay: 0.75 },
                                     }}
                                     className="tag"
+                                    onClick={() => jumpTo('projects')}
                                 >
                                     {t('buttons.projects')}
                                 </motion.button>

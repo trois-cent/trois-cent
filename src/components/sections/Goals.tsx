@@ -12,6 +12,7 @@ const Goals = () => {
     const t = useTranslations()
 
     useEffect(() => {
+        if (matchMedia('(hover: none)').matches) return
         const parallaxElements = document.querySelectorAll('[data-parallax]')
         const animations: gsap.core.Tween[] = []
 

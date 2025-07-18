@@ -24,7 +24,7 @@ const SmoothScrolling: React.FC<SmoothScrollingProps> = ({ children }) => {
     }, [])
 
     return (
-        <ReactLenis root options={{ autoRaf: false, lerp: 0.15 }} ref={ref}>
+        <ReactLenis root options={{ autoRaf: false, lerp: 0.15, syncTouch: false }} ref={ref}>
             {children}
         </ReactLenis>
     )

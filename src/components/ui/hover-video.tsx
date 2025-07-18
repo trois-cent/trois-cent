@@ -79,7 +79,13 @@ export const HoverVideo: React.FC<HoverVideoProps> = ({ src, poster, className =
             }}
             className={className}
         >
-            <video
+            <motion.video
+                onViewportEnter={() => {
+                    if (videoRef.current) videoRef.current.play()
+                }}
+                onViewportLeave={() => {
+                    if (videoRef.current) videoRef.current.pause()
+                }}
                 ref={videoRef}
                 src={src}
                 poster={poster}
@@ -89,7 +95,7 @@ export const HoverVideo: React.FC<HoverVideoProps> = ({ src, poster, className =
                 preload="auto"
                 style={{ objectFit: 'cover', width: '100%', height: '100%' }}
             />
-            <AnimatePresence mode='wait'>
+            <AnimatePresence mode="wait">
                 {isHovering && !isTouchDevice() && (
                     <motion.div
                         initial={{ scale: 0.5, opacity: 0 }}

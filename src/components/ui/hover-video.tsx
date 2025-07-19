@@ -81,10 +81,10 @@ export const HoverVideo: React.FC<HoverVideoProps> = ({ src, poster, className =
         >
             <motion.video
                 onViewportEnter={() => {
-                    if (videoRef.current) videoRef.current.play()
+                    if (videoRef.current && matchMedia('(hover: none)').matches) videoRef.current.play()
                 }}
                 onViewportLeave={() => {
-                    if (videoRef.current) videoRef.current.pause()
+                    if (videoRef.current && matchMedia('(hover: none)').matches) videoRef.current.pause()
                 }}
                 ref={videoRef}
                 src={src}
@@ -94,28 +94,27 @@ export const HoverVideo: React.FC<HoverVideoProps> = ({ src, poster, className =
                 playsInline
                 preload="auto"
                 style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                onTapStart={() => {
+                    onPress()
+                    setIsPressed(true)
+                }}
+                onTap={() => {
+                    onPressRelease()
+                    setIsPressed(false)
+                }}
+                onTapCancel={() => {
+                    onPressRelease()
+                    setIsPressed(false)
+                }}
             />
             <AnimatePresence mode="wait">
                 {isHovering && !isTouchDevice() && (
                     <motion.div
                         initial={{ scale: 0.5, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        whileTap={{ scale: 0.75 }}
+                        animate={{ scale: isPressed ? 0.75 : 1, opacity: 1 }}
                         exit={{ scale: 0.5, opacity: 0 }}
                         transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                        onTapStart={() => {
-                            onPress()
-                            setIsPressed(true)
-                        }}
-                        onTap={() => {
-                            onPressRelease()
-                            setIsPressed(false)
-                        }}
-                        onTapCancel={() => {
-                            onPressRelease()
-                            setIsPressed(false)
-                        }}
-                        className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px] rounded-full cursor-pointer flex items-center justify-center text-xs text-white font-medium tracking-wider uppercase"
+                        className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px] rounded-full cursor-pointer flex items-center justify-center text-xs text-white font-medium tracking-wider uppercase pointer-events-none"
                         style={{
                             x,
                             y,

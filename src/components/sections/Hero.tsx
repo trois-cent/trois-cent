@@ -3,8 +3,8 @@
 import { useEffect } from 'react'
 import gsap from 'gsap'
 import { Button } from '../ui/buttons/button'
-import { ArrowRight } from 'lucide-react'
 import { useLenis } from 'lenis/react'
+import CallBooker from '../ui/CallBooker'
 
 const Hero = () => {
     const lenis = useLenis()
@@ -266,12 +266,7 @@ const Hero = () => {
                         text="Projets"
                         onClick={() => jumpTo('projects')}
                     />
-                    <Button
-                        className="hero-button opacity-0"
-                        variant="accent"
-                        text="Booker un appel"
-                        icon={<ArrowRight size={14} />}
-                    />
+                    <CallBooker triggerClassname="hero-button opacity-0" />
                 </div>
 
                 <div className="spacer landscape:hidden" />

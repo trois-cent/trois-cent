@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react'
 import './styles.scss'
 
-type ButtonProps = {
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     text: string
     icon?: ReactNode
     variant: 'accent' | 'white' | 'off-white' | 'black'
@@ -10,11 +10,12 @@ type ButtonProps = {
     className?: string
 }
 
-export const Button: FC<ButtonProps> = ({ text, icon, variant, width = 'auto', onClick, className }) => {
+export const Button: FC<ButtonProps> = ({ text, icon, variant, width = 'auto', onClick, className, ...props }) => {
     return (
         <button
             className={`text-icon-button ${width === 'full' ? '100%' : 'max-content'} ${variant} ${className}`}
             onClick={onClick}
+            {...props}
         >
             <div className="content" data-text={text}>
                 {icon && <div className="icon-wrap">{icon}</div>}

@@ -113,7 +113,7 @@ export const SplitText: React.FC<SplitTextProps> = ({
             gsap.killTweensOf(targets)
             splitter.revert()
         }
-    }, [text, delay, duration, ease, splitType, from, to, threshold, rootMargin, onLetterAnimationComplete])
+    }, [text, delay, duration, ease, splitType, from, to, threshold, rootMargin, startDelay, onLetterAnimationComplete])
 
     return (
         <p

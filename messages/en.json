@@ -15,6 +15,9 @@
             "0": "Prêt à commencer ?"
         }
     },
+    "ctas": {
+        "visitWebsite": "Visiter le site"
+    },
     "branding": {
         "name": "Branding",
         "shortDesc": "Logo, branding, contenu -- tout ce dont votre marque a besoin pour s’établir et grandir."
@@ -28,7 +31,7 @@
         "shortDesc": "Sites vitrines, e-commerce, applications web et mobiles -- on bâti la plateforme qui convertit vos visiteurs en clients."
     },
     "goals": {
-        "creation": "Création",
+        "creation": "Conception",
         "growth": "Croissance",
         "optimization": "Optimisation",
         "firstStep": "On établit les objectifs.",
@@ -46,10 +49,12 @@
     },
     "jo-barber": {
         "name": "Jo Barber",
-        "tags": "Branding"
+        "tags": "Branding",
+        "shortDesc": "Un branding moderne et humain, à l’image du service que Jo Barber offre chaque jour."
     },
     "athlete-x": {
         "name": "Athlete-X",
-        "tags": "Branding,UX/UI,Web App"
+        "tags": "Branding,UX/UI,Web App",
+        "shortDesc": "D’une idée à une plateforme bien réelle, Athlete-X aide déjà de jeunes athlètes partout en Amérique du Nord à se démarquer et à se faire recruter, peu importe leur origine sociale ou économique."
     }
 }

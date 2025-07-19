@@ -18,6 +18,8 @@
     // radius
     --radius-sm: 4px;
     --radius-md: 8px;
+
+    --215-fast: 0.35s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 @theme inline {
@@ -148,4 +150,21 @@ h3 {
     letter-spacing: -0.03em;
     line-height: 1.15em;
     text-transform: uppercase;
+}
+
+.simple-link {
+    color: var(--accent);
+    font-family: 'Manrope';
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.fast-215 {
+    transition: var(--215-fast);
+}
+
+// Cal.com modal styles
+body .cal-element-embed-light iframe.cal-embed {
+    width: 80% !important;
+    max-height: 60vh !important;
 }

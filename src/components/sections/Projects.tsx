@@ -1,7 +1,10 @@
 'use client'
 
+import { motion } from 'framer-motion'
+
 import { useTranslations } from 'next-intl'
 import { HoverVideo } from '../ui/hover-video'
+import { SplitText } from '../ui/split-text'
 
 const Projects = () => {
     const t = useTranslations()
@@ -20,59 +23,89 @@ const Projects = () => {
             </div>
             <div className="cont space-y-12 lg:space-y-0">
                 {/* Cèdres 3R */}
-                <div className="col-span-12 lg:col-span-6">
-                    {/* <div className="bg-off-white rounded-lg w-full aspect-[3/2]"></div> */}
-                    <HoverVideo src="/c3r_stopmotion.mp4" className="rounded-lg w-full aspect-[4/3]" />
-                    <h3 className="mt-2">{t('cedres-3r.name')}</h3>
-                    <ul className="flex gap-1 mt-2">
-                        {t('cedres-3r.tags')
-                            .split(',')
-                            .map(tag => (
-                                <li key={tag} className="tag small">
-                                    {tag.trim()}
-                                </li>
-                            ))}
-                    </ul>
+                <div className="col-span-12 grid grid-cols-2 gap-grid-gap">
+                    <div className="flex flex-col lg:flex-col-reverse lg:items-center lg:justify-center gap-4">
+                        <h3 className="">{t('cedres-3r.name')}</h3>
+                        <ul className="flex gap-1">
+                            {t('cedres-3r.tags')
+                                .split(',')
+                                .map(tag => (
+                                    <li key={tag} className="tag">
+                                        {tag.trim()}
+                                    </li>
+                                ))}
+                        </ul>
+                    </div>
+                    <HoverVideo src="/c3r_stopmotion.mp4" className="rounded-lg w-full aspect-square" />
                 </div>
                 {/* Jo Barber */}
-                <div className="col-span-12 lg:col-span-6 relative">
-                    {/* <div className="bg-off-white rounded-lg w-full h-[60vh] xl:h-[calc(100vh_-_var(--gutter)_*_2)]"></div> */}
+                <div className="col-span-12 grid grid-cols-2 gap-grid-gap">
                     <HoverVideo
                         src="/jb_stopmotion.mp4"
                         className="rounded-lg w-full aspect-[4/5] xl:aspect-auto xl:h-[calc(100vh_-_var(--gutter)_*_2)]"
                     />
-                    <div className="lg:absolute bottom-0 right-[calc(100%_+_var(--grid-gap))] flex flex-col w-max lg:items-end">
-                        <h3 className="mt-2">{t('jo-barber.name')}</h3>
-                        <ul className="flex gap-1 mt-2">
-                            {t('jo-barber.tags')
-                                .split(',')
-                                .map(tag => (
-                                    <li key={tag} className="tag small">
-                                        {tag.trim()}
-                                    </li>
-                                ))}
-                        </ul>
+                    <div className="flex items-center justify-center">
+                        <div className="w-full max-w-[400px] space-y-8">
+                            <h3 className="">{t('jo-barber.name')}</h3>
+                            <ul className="flex gap-1">
+                                {t('jo-barber.tags')
+                                    .split(',')
+                                    .map(tag => (
+                                        <li key={tag} className="tag">
+                                            {tag.trim()}
+                                        </li>
+                                    ))}
+                            </ul>
+                            <SplitText
+                                text={t('jo-barber.shortDesc')}
+                                splitType="lines"
+                                from={{ opacity: 0, y: '105%' }}
+                                textAlign="left"
+                            />
+                        </div>
                     </div>
                 </div>
                 {/* Athlete-X */}
-                <div className="col-span-12 grid grid-cols-12 gap-[var(--grid-gap)]">
-                    {/* <div className="col-span-12 lg:col-span-9 bg-off-white rounded-lg w-full h-[40vh] xl:h-[calc(100vh_-_var(--gutter)_*_2)]"></div> */}
-                    <HoverVideo
-                        src="/ax_stopmotion.mp4"
-                        className="col-span-12 lg:col-span-6 rounded-lg w-full aspect-square max-h-[calc(100vh_-_var(--gutter)_*_2)]"
-                    />
-                    <div className="col-span-12 lg:col-span-3 flex flex-col justify-end">
-                        <h3 className="mt-2">{t('athlete-x.name')}</h3>
-                        <ul className="flex gap-1 mt-2">
-                            {t('athlete-x.tags')
-                                .split(',')
-                                .map(tag => (
-                                    <li key={tag} className="tag small">
-                                        {tag.trim()}
-                                    </li>
-                                ))}
-                        </ul>
+                {/* Cèdres 3R */}
+                <div className="col-span-12 grid grid-cols-2 gap-grid-gap">
+                    <div className="flex items-center justify-center">
+                        <div className="w-full max-w-[400px] space-y-8">
+                            <h3 className="">{t('athlete-x.name')}</h3>
+                            <ul className="flex gap-1">
+                                {t('athlete-x.tags')
+                                    .split(',')
+                                    .map(tag => (
+                                        <li key={tag} className="tag">
+                                            {tag.trim()}
+                                        </li>
+                                    ))}
+                            </ul>
+                            <SplitText
+                                text={t('athlete-x.shortDesc')}
+                                splitType="lines"
+                                from={{ opacity: 0, y: '105%' }}
+                                to={{ opacity: 1, y: 0 }}
+                                textAlign="left"
+                            />
+                            <motion.a
+                                initial={{ opacity: 0, y: '105%' }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                href="https://athlete-x.io"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="simple-link flex items-center gap-1.5 hover:gap-3 fast-215"
+                            >
+                                <SplitText
+                                    text={t('ctas.visitWebsite')}
+                                    splitType="lines"
+                                    from={{ opacity: 0, y: '105%' }}
+                                    to={{ opacity: 1, y: 0 }}
+                                    textAlign="left"
+                                />
+                            </motion.a>
+                        </div>
                     </div>
+                    <HoverVideo src="/ax_stopmotion.mp4" className="rounded-lg w-full aspect-square" />
                 </div>
             </div>
         </section>

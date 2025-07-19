@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@calcom/atoms": "^1.1.1",
+    "@calcom/embed-react": "^1.5.3",
     "@formatjs/intl-localematcher": "^0.6.1",
     "@gsap/react": "^2.1.2",
     "framer-motion": "^12.18.1",

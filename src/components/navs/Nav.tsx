@@ -13,7 +13,6 @@ const Nav = () => {
     const [menuOpen, setMenuOpen] = useState(false)
 
     const handleMenuClose = () => {
-        gsap.to('#menu-body', { opacity: 0, scale: 0.65, duration: 0.65, ease: 'power3.out' })
         gsap.set('#menu-body', { display: 'none' })
 
         setMenuOpen(false)
@@ -22,8 +21,8 @@ const Nav = () => {
     const handleMenuOpen = () => {
         gsap.set('#menu-body', {
             display: 'flex',
-            transformOrigin: 'top',
-            x: '-50%',
+            transformOrigin: `top ${matchMedia('(min-width: 768px)').matches ? '50%' : '0%'}`,
+            x: matchMedia('(min-width: 768px)').matches ? '-50%' : '0%',
         })
         gsap.fromTo(
             '#menu-body',
@@ -43,10 +42,9 @@ const Nav = () => {
 
             if (scrollPosition > windowHeight * 0.95) {
                 gsap.to('nav', { y: 0, duration: 0.85, ease: 'power2.out' })
-                console.log('Nav shown')
             } else {
                 gsap.to('nav', { y: '-105%', duration: 0.85, ease: 'power2.out' })
-                console.log('Nav hidden')
+                handleMenuClose()
             }
         }
 
@@ -75,7 +73,7 @@ const Nav = () => {
 
                 <div
                     id="menu-body"
-                    className="hidden absolute z-50 top-[calc(100%+4px)] left-1/2 w-max p-6 bg-[rgba(17,17,17,0.5)] backdrop-blur-md rounded-lg flex-col gap-4"
+                    className="hidden absolute z-50 top-[calc(100%+4px)] left-0 md:left-1/2 w-max p-6 bg-[rgba(17,17,17,0.5)] backdrop-blur-md rounded-sm flex-col gap-4"
                 >
                     <div className="flex flex-col gap-2">
                         <button

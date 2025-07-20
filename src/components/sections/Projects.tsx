@@ -78,6 +78,7 @@ const Projects = () => {
                 <div className="col-span-12 flex flex-col lg:grid grid-cols-2 gap-grid-gap">
                     <HoverVideo
                         src="/jb_stopmotion.mp4"
+                        poster="/jb_stopmotion_poster.jpg"
                         className="project-video rounded-lg w-full aspect-[4/5] xl:aspect-auto xl:h-[calc(100vh_-_var(--gutter)_*_2)]"
                     />
                     <div className="flex items-center lg:justify-center">
@@ -132,7 +133,11 @@ const Projects = () => {
                             />
                         </div>
                     </div>
-                    <HoverVideo src="/ax_stopmotion.mp4" className="project-video rounded-lg w-full aspect-square" />
+                    <HoverVideo
+                        src="/ax_stopmotion.mp4"
+                        poster="/ax_stopmotion_poster.jpg"
+                        className="project-video rounded-lg w-full aspect-square"
+                    />
                 </div>
             </div>
         </section>

@@ -133,9 +133,12 @@ const Hero = () => {
                 >
                     <video
                         autoPlay
+                        playsInline
+                        preload="auto"
                         muted
                         loop
                         src="/showreel.mp4"
+                        poster='/showreel_poster.png'
                         className="absolute z-10 left-0 top-0 w-full h-full object-cover"
                     />
                     <h1 className="relative z-10">

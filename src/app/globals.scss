@@ -6,7 +6,9 @@
     --foreground: #171717;
 
     --accent: #ff3232;
+    --accent-darker: #e62c2c;
     --white: #ffffff;
+    --white-45: rgba(255, 255, 255, 0.45);
     --off-white: #ededed;
 
     --black: #171717;
@@ -27,6 +29,7 @@
     --color-foreground: var(--foreground);
     --color-accent: var(--accent);
     --color-white: var(--white);
+    --color-white-45: var(--white-45);
     --color-off-white: var(--off-white);
     --color-black: var(--black);
     --spacing-gutter: var(--gutter);
@@ -164,7 +167,9 @@ h3 {
 }
 
 // Cal.com modal styles
-body .cal-element-embed-light iframe.cal-embed {
-    width: 80% !important;
-    max-height: 60vh !important;
+@media screen and (orientation: landscape) {
+    body .cal-element-embed-light iframe.cal-embed {
+        width: 100% !important;
+        max-height: 80vh !important;
+    }
 }

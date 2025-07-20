@@ -257,13 +257,13 @@ const Hero = () => {
                 <div className="flex flex-wrap items-center gap-1.5">
                     <Button
                         className="hero-button opacity-0"
-                        variant="off-white"
+                        variant="blurred"
                         text="Services"
                         onClick={() => jumpTo('services')}
                     />
                     <Button
                         className="hero-button opacity-0 portrait:hidden"
-                        variant="off-white"
+                        variant="blurred"
                         text="Projets"
                         onClick={() => jumpTo('projects')}
                     />

@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { DrawSVGPlugin } from 'gsap/all'
 import { useEffect } from 'react'
 import { useTranslations } from 'next-intl'
+import { SplitText } from '../ui/split-text'
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin)
 
@@ -221,7 +222,15 @@ const Services = () => {
                 <div className="col-span-12 lg:col-span-4 flex flex-col gap-6 lg:gap-10 pb-16 lg:pb-0">
                     <span className="tag black small">01</span>
                     <h3>{t('branding.name')}</h3>
-                    <p className="w-2/3">{t('branding.shortDesc')}</p>
+                    {/* <p className="w-2/3">{t('branding.shortDesc')}</p> */}
+                    <SplitText
+                        text={t('branding.shortDesc')}
+                        splitType="lines"
+                        from={{ opacity: 0, y: '105%' }}
+                        to={{ opacity: 1, y: 0 }}
+                        textAlign="left"
+                        className="w-2/3"
+                    />
                 </div>
                 {/* Design */}
                 <div className="service-square col-span-12 lg:col-span-4 aspect-square bg-accent rounded-lg lg:row-start-2 lg:col-start-5 flex items-center justify-center">
@@ -328,7 +337,15 @@ const Services = () => {
                 <div className="col-span-12 lg:col-span-4 flex flex-col justify-center gap-6 lg:gap-10 lg:row-start-2 lg:col-start-9 pb-16 lg:pb-0">
                     <span className="tag small accent">02</span>
                     <h3>{t('design.name')}</h3>
-                    <p className="w-2/3">{t('design.shortDesc')}</p>
+                    {/* <p className="w-2/3">{t('design.shortDesc')}</p> */}
+                    <SplitText
+                        text={t('design.shortDesc')}
+                        splitType="lines"
+                        from={{ opacity: 0, y: '105%' }}
+                        to={{ opacity: 1, y: 0 }}
+                        textAlign="left"
+                        className="w-2/3"
+                    />
                 </div>
                 {/* Development */}
                 <div className="service-square col-span-12 lg:col-span-4 aspect-square bg-off-white rounded-lg lg:lg:row-start-3 flex items-center justify-center">
@@ -377,7 +394,15 @@ const Services = () => {
                 <div className="col-span-12 lg:col-span-4 flex flex-col justify-end gap-6 lg:gap-10 lg:row-start-3 pb-16 lg:pb-0">
                     <span className="tag small">03</span>
                     <h3>{t('development.name')}</h3>
-                    <p className="w-2/3">{t('development.shortDesc')}</p>
+                    {/* <p className="w-2/3">{t('development.shortDesc')}</p> */}
+                    <SplitText
+                        text={t('development.shortDesc')}
+                        splitType="lines"
+                        from={{ opacity: 0, y: '105%' }}
+                        to={{ opacity: 1, y: 0 }}
+                        textAlign="left"
+                        className="w-2/3"
+                    />
                 </div>
             </div>
         </section>

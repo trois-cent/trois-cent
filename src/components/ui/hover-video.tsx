@@ -118,7 +118,7 @@ export const HoverVideo: React.FC<HoverVideoProps> = ({ src, poster, className =
                         style={{
                             x,
                             y,
-                            backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                            backgroundColor: 'rgba(17, 17, 17, 0.5)',
                             backdropFilter: 'blur(10px)',
                             userSelect: 'none',
                         }}

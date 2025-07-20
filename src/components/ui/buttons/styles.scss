@@ -26,6 +26,12 @@
 
     &.full {
         width: 100%;
+        text-align: center;
+
+        .content {
+            width: 100%;
+            justify-content: center;
+        }
     }
 
     .content {
@@ -60,8 +66,6 @@
             font-size: var(--text-size);
             font-weight: 600;
             font-family: 'Manrope';
-            // letter-spacing: -0.05em;
-            // text-transform: uppercase;
             white-space: nowrap;
 
             padding-inline: var(--text-padding-x);
@@ -140,6 +144,16 @@
         --icon-frame: var(--white);
         --icon: var(--black);
     }
+
+    &.blurred {
+        --bg: rgba(17, 17, 17, 0.5);
+        --text: var(--white);
+        --icon-frame: var(--white);
+        --icon: var(--black);
+
+        backdrop-filter: blur(10px);
+    }
+
     &.small {
         --button-height: 28px;
         --text-padding-x: 8px;

@@ -6,6 +6,7 @@ import Goals from '@/components/sections/Goals'
 import SmoothScrolling from '@/components/tools/SmoothScrolling'
 import Hero from '@/components/sections/Hero'
 import ContactUs from '@/components/sections/ContactUs'
+import Footer from '@/components/sections/Footer'
 
 export default function Page() {
     return (
@@ -15,7 +16,7 @@ export default function Page() {
             <Projects />
             <Goals />
             <ContactUs />
-            {/* <Footer /> */}
+            <Footer />
         </SmoothScrolling>
     )
 }

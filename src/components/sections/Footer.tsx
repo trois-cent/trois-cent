@@ -1,27 +1,26 @@
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import React from 'react'
+import { HeadLogo, Logo } from '../ui/logo'
 
 const Footer = () => {
     const t = useTranslations()
 
     return (
-        <div className="w-full h-screen px-gutter pt-gutter pb-2.5 grid grid-rows-[1fr_auto] gap-2">
-            <div className="w-full bg-black rounded-lg grid grid-rows-2 p-12">
+        <div className="w-full aspect-[2/3] md:aspect-[2.5/3] lg:aspect-none lg:h-[100svh] px-gutter pt-gutter pb-2.5 grid grid-rows-[1fr_auto] gap-2">
+            {/* <div className="w-full bg-black rounded-lg grid grid-rows-2 p-12">
                 <div className="flex items-end justify-between">
                     <div className="flex items-center gap-8">
                         <a href="mailto:hi@troiscent.ca" className="font-mono text-[18px] text-accent">
                             hi@troiscent.ca
                         </a>
-                        <button className="font-mono text-[18px] text-accent text-left">Instagram</button>
+                        <a href="https://www.instagram.com/_troiscent/" className="font-mono text-[18px] text-accent text-left">Instagram</a>
                     </div>
-                    <Image src="/jb_01.png" fill alt='boooombooooclat' className="h-[350px] aspect-[1/1] rounded-lg bg-off-white object-cover" />
 
                     <div className="col-start-12 flex flex-col justify-end items-end">
                         <button className="font-mono text-[18px] text-accent text-left">en</button>
                     </div>
                 </div>
-                {/* big logo */}
                 <div className="flex items-end">
                     <svg width="w-full" viewBox="0 0 1566 214" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -63,10 +62,27 @@ const Footer = () => {
                         />
                     </svg>
                 </div>
+            </div> */}
+
+            <div className="w-full bg-black rounded-lg flex flex-col items-center justify-center gap-4">
+                <HeadLogo color="var(--accent)" className="w-[150px] md:w-[250px]" />
+                <Logo color="var(--accent)" className="w-[150px] md:w-[250px]" />
+                {/* <div className="w-full flex flex-col items-center gap-1">
+                    <a href="mailto:hi@troiscent.ca" className="w-1/3 font-mono text-[18px] text-accent">
+                        hi@troiscent.ca
+                    </a>
+                    <a
+                        href="https://www.instagram.com/_troiscent/"
+                        className="font-mono text-[18px] text-accent text-left"
+                    >
+                        Instagram
+                    </a>
+                </div> */}
             </div>
-            <div className="flex items-center justify-between">
-                <p className="text-xs text-black opacity-45 leading-[1em]">{t('copyrights.text')}</p>
-                <p className="text-xs text-black opacity-45 leading-[1em]">{t('copyrights.from')}</p>
+
+            <div className="flex flex-col md:flex-row items-center justify-between gap-2 p-2">
+                <p className="text-[9px] md:text-xs text-black opacity-45 leading-[1em]">{t('copyrights.text')}</p>
+                <p className="text-[9px] md:text-xs text-black opacity-45 leading-[1em]">{t('copyrights.from')}</p>
             </div>
         </div>
     )

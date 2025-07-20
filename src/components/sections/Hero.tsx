@@ -11,6 +11,7 @@ const Hero = () => {
 
     const jumpTo = (section: 'projects' | 'services') => {
         if (lenis) lenis.scrollTo(`#${section}`, { duration: 1.15, lerp: 0.15 })
+        else console.log('Lenis not initialized: ', lenis)
     }
 
     useEffect(() => {

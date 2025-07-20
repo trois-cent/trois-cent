@@ -10,3 +10,22 @@ export const Logo: FC<SVGProps<SVGSVGElement> & { color?: string }> = ({ color =
         </svg>
     )
 }
+
+export const HeadLogo: FC<SVGProps<SVGSVGElement> & { color?: string }> = ({ color = 'var(--black)', ...props }) => {
+    return (
+        <svg {...props} viewBox="0 0 540 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M0 0H540V143.623L333.553 224.132C309.565 233.487 292.988 255.673 290.818 281.328L282.375 381.112H257.625L249.182 281.328C247.012 255.673 230.435 233.487 206.447 224.132L0 143.623V0Z"
+                fill={color}
+            />
+            <path
+                d="M0 233.961V540H196.35L170.422 358.994C167.426 338.078 154.808 319.772 136.328 309.528L0 233.961Z"
+                fill={color}
+            />
+            <path
+                d="M403.672 309.528L540 233.961V540H343.65L369.578 358.994C372.574 338.078 385.192 319.772 403.672 309.528Z"
+                fill={color}
+            />
+        </svg>
+    )
+}

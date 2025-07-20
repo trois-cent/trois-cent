@@ -5,15 +5,16 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     text: string
     icon?: ReactNode
     variant: 'accent' | 'white' | 'off-white' | 'black'
+    size?: 'small' | 'normal'
     width?: 'full' | 'auto'
     onClick?: () => void
     className?: string
 }
 
-export const Button: FC<ButtonProps> = ({ text, icon, variant, width = 'auto', onClick, className, ...props }) => {
+export const Button: FC<ButtonProps> = ({ text, icon, variant, size = 'normal', width = 'auto', onClick, className, ...props }) => {
     return (
         <button
-            className={`text-icon-button ${width === 'full' ? '100%' : 'max-content'} ${variant} ${className}`}
+            className={`text-icon-button ${width === 'full' ? '100%' : 'max-content'} ${variant} ${className} ${size}`}
             onClick={onClick}
             {...props}
         >

@@ -12,7 +12,7 @@
         },
         "contacts": {
             "tag": "Contacts",
-            "0": "Prêt à commencer ?"
+            "0": "Parlez-nous de votre projet!"
         }
     },
     "ctas": {
@@ -45,7 +45,8 @@
     },
     "cedres-3r": {
         "name": "Cèdres 3R",
-        "tags": "Branding,UX/UI"
+        "tags": "Branding,UX/UI",
+        "shortDesc": "Un rebranding complet pour Cèdres 3R, les experts en installation et entretien de cèdres en Mauricie."
     },
     "jo-barber": {
         "name": "Jo Barber",

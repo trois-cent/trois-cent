@@ -1,61 +1,71 @@
 {
+    "lang": "en",
+    "kw": {
+        "menu": "Menu",
+        "close": "Close",
+        "instagram": "Instagram",
+        "press": "Press",
+        "release": "Release"
+    },
     "sectionTitles": {
         "services": {
             "tag": "Services",
-            "0": "De l'idée au lancement",
-            "1": "on est avec toi."
+            "0": "From idea to launch,",
+            "1": "we're with you."
         },
         "projects": {
-            "tag": "Projets",
-            "0": "Petits et gros projets,",
-            "1": "on donne notre 300%."
+            "tag": "Projects",
+            "0": "Big or small, we give",
+            "1": "each project our 300%."
         },
         "contacts": {
-            "tag": "Contacts",
-            "0": "Parlez-nous de votre projet!"
+            "tag": "Contact us",
+            "0": "Let’s talk about your ideas!"
         }
     },
     "ctas": {
-        "visitWebsite": "Visiter le site"
+        "visitWebsite": "Visit the site",
+        "bookCall": "Book a call",
+        "sendEmail": "hi@troiscent.ca"
     },
     "branding": {
         "name": "Branding",
-        "shortDesc": "Logo, branding, contenu -- tout ce dont votre marque a besoin pour s’établir et grandir."
+        "shortDesc": "Logo, brand identity, content—everything you need to launch and grow your brand."
     },
     "design": {
-        "name": "Design UX/UI",
-        "shortDesc": "Des interfaces qui captent l’attention, guident l’action et maximisent les résultats. "
+        "name": "UX/UI Design",
+        "shortDesc": "Interfaces that grab attention, guide action, and deliver results."
     },
     "development": {
-        "name": "Solutions digitales",
-        "shortDesc": "Sites vitrines, e-commerce, applications web et mobiles -- on bâti la plateforme qui convertit vos visiteurs en clients."
+        "name": "Digital Solutions",
+        "shortDesc": "Showcase sites, online stores, web and mobile apps—we build the platform that turns your visitors into clients."
     },
     "goals": {
-        "creation": "Conception",
-        "growth": "Croissance",
-        "optimization": "Optimisation",
-        "firstStep": "On établit les objectifs.",
-        "secondStep": "On les réalise."
+        "creation": "Creation",
+        "growth": "Growth",
+        "optimization": "Optimization",
+        "firstStep": "We define your goals.",
+        "secondStep": "We reach them together."
     },
     "copyrights": {
-        "text": "© 2025 - Trois Cent, s.e.n.c. Tous droits réservés.",
-        "from": "Basé au Québec. Ouvert à l'international.",
-        "legal": "Mentions légales",
-        "cookies": "Gestion des cookies"
+        "text": "© 2025 - Trois Cent. All rights reserved.",
+        "from": "Based in Quebec. Working worldwide.",
+        "cookies": "Cookies",
+        "privacy": "Privacy"
     },
     "cedres-3r": {
         "name": "Cèdres 3R",
-        "tags": "Branding,UX/UI",
-        "shortDesc": "Un rebranding complet pour Cèdres 3R, les experts en installation et entretien de cèdres en Mauricie."
+        "tags": "Branding, UX/UI",
+        "shortDesc": "A complete rebrand for Cèdres 3R, experts in cedar hedge installation and maintenance in the Mauricie region."
     },
     "jo-barber": {
         "name": "Jo Barber",
         "tags": "Branding",
-        "shortDesc": "Un branding moderne et humain, à l’image du service que Jo Barber offre chaque jour."
+        "shortDesc": "A modern, human brand—true to the quality of service Jo Barber delivers every day."
     },
     "athlete-x": {
         "name": "Athlete-X",
-        "tags": "Branding,UX/UI,Web App",
-        "shortDesc": "D’une idée à une plateforme bien réelle, Athlete-X aide déjà de jeunes athlètes partout en Amérique du Nord à se démarquer et à se faire recruter, peu importe leur origine sociale ou économique."
+        "tags": "Branding, UX/UI, Web App",
+        "shortDesc": "From idea to live platform, Athlete-X is already helping young athletes across North America to stand out and get recruited—no matter their social or economicbackground."
     }
 }

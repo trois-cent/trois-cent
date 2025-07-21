@@ -2,12 +2,15 @@ import { getCalApi } from '@calcom/embed-react'
 import { useEffect } from 'react'
 import { Button } from './buttons/button'
 import { ChevronRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 type CallBookerProps = {
     triggerClassname?: string
 }
 
 export default function CallBooker({ triggerClassname }: CallBookerProps) {
+    const t = useTranslations()
+
     useEffect(() => {
         ;(async function () {
             const cal = await getCalApi({ namespace: 'discovery-call' })
@@ -22,11 +25,11 @@ export default function CallBooker({ triggerClassname }: CallBookerProps) {
         <Button
             className={triggerClassname}
             variant="accent"
-            text="Réserver un appel"
+            text={t('ctas.bookCall')}
             icon={<ChevronRight size={14} />}
             data-cal-namespace="discovery-call"
             data-cal-link="trois-cent/discovery-call"
-            data-cal-config='{"layout":"week_view"}'
+            data-cal-config='{"layout":"month_view"}'
         />
     )
 }

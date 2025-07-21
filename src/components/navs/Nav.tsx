@@ -6,8 +6,11 @@ import { Button } from '../ui/buttons/button'
 import { useLenis } from 'lenis/react'
 import gsap from 'gsap'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 
 const Nav = () => {
+    const t = useTranslations()
     const lenis = useLenis()
 
     const [menuOpen, setMenuOpen] = useState(false)
@@ -66,7 +69,7 @@ const Nav = () => {
         <nav className="fixed z-50 top-0 right-0 p-5 flex items-center gap-1 -translate-y-[105%]">
             <div className="relative">
                 <Button
-                    text={menuOpen ? 'Close' : 'Menu'}
+                    text={menuOpen ? t('kw.close') : t('kw.menu')}
                     variant="blurred"
                     onClick={menuOpen ? handleMenuClose : handleMenuOpen}
                 />
@@ -80,21 +83,21 @@ const Nav = () => {
                             className="text-[20px] text-white lg:text-white-45 hover:text-white font-medium text-left cursor-pointer fast-215 flex items-center gap-1 hover:gap-2"
                             onClick={() => jumpTo('services')}
                         >
-                            Services
+                            {t('sectionTitles.services.tag')}
                             <ArrowRight size={13} />
                         </button>
                         <button
                             className="text-[20px] text-white lg:text-white-45 hover:text-white font-medium text-left cursor-pointer fast-215 flex items-center gap-1 hover:gap-2"
                             onClick={() => jumpTo('projects')}
                         >
-                            Projects
+                            {t('sectionTitles.projects.tag')}
                             <ArrowRight size={13} />
                         </button>
                         <button
                             className="text-[20px] text-white lg:text-white-45 hover:text-white font-medium text-left cursor-pointer fast-215 flex items-center gap-1 hover:gap-2"
                             onClick={() => jumpTo('contact-us')}
                         >
-                            Contact Us
+                            {t('sectionTitles.contacts.tag')}
                             <ArrowRight size={13} />
                         </button>
                     </div>
@@ -106,13 +109,17 @@ const Nav = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Instagram
+                            {t('kw.instagram')}
                             <ArrowUpRight size={13} />
                         </a>
-                        <button className="text-sm font-medium text-white-45 hover:text-white fast-215 cursor-pointer flex items-center gap-1">
-                            English
+                        <Link
+                            href="/"
+                            locale={t('lang') === 'fr' ? 'en' : 'fr'}
+                            className="text-sm font-medium text-white-45 hover:text-white fast-215 cursor-pointer flex items-center gap-1"
+                        >
+                            {t('lang') === 'fr' ? 'English' : 'Français'}
                             <ArrowUpRight size={13} />
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

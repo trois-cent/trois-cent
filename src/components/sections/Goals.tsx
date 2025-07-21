@@ -47,7 +47,7 @@ const Goals = () => {
     }, [])
 
     return (
-        <section id="goals" className="w-full py-48 md:py-96">
+        <section id="goals" className="w-full pt-48 md:py-96">
             <ul className="flex flex-col items-center mb-48 md:mb-72">
                 <li className="impact-text">
                     <SplitText
@@ -84,7 +84,7 @@ const Goals = () => {
                 <div
                     data-parallax
                     data-speed={'125px'}
-                    className="col-span-12 lg:col-span-4 lg:col-start-3 lg:aspect-[5/4] rounded-lg bg-accent py-8 md:py-12 flex flex-col justify-between gap-y-24"
+                    className="col-span-12 lg:col-span-5 lg:col-start-2 lg:aspect-[5/4] rounded-lg bg-accent py-8 md:py-12 flex flex-col justify-between gap-y-24"
                 >
                     <svg className="w-full" viewBox="0 0 774 77" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line y1="6.5" x2="774" y2="6.5" stroke="#171717" strokeWidth="3" />
@@ -103,7 +103,7 @@ const Goals = () => {
                 <div
                     data-parallax
                     data-speed={'250px'}
-                    className="col-span-12 lg:col-span-4 lg:aspect-[5/4] rounded-lg bg-accent py-8 md:py-12 flex flex-col justify-between gap-y-24"
+                    className="col-span-12 lg:col-span-5 lg:aspect-[5/4] rounded-lg bg-accent py-8 md:py-12 flex flex-col justify-between gap-y-24"
                 >
                     <svg className="w-full" viewBox="0 0 774 85" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line y1="10.5" x2="774" y2="10.5" stroke="#171717" strokeWidth="3" />

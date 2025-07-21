@@ -176,7 +176,9 @@ const Services = () => {
         })
 
         return () => {
-            timelines.forEach(tl => tl.kill())
+            timelines.forEach(tl => {
+                tl.revert()
+            })
         }
     }, [])
 
@@ -222,7 +224,6 @@ const Services = () => {
                 <div className="col-span-12 lg:col-span-4 flex flex-col gap-6 lg:gap-10 pb-16 lg:pb-0">
                     <span className="tag black small">01</span>
                     <h3>{t('branding.name')}</h3>
-                    {/* <p className="w-2/3">{t('branding.shortDesc')}</p> */}
                     <SplitText
                         text={t('branding.shortDesc')}
                         splitType="lines"
@@ -337,7 +338,6 @@ const Services = () => {
                 <div className="col-span-12 lg:col-span-4 flex flex-col justify-center gap-6 lg:gap-10 lg:row-start-2 lg:col-start-9 pb-16 lg:pb-0">
                     <span className="tag small accent">02</span>
                     <h3>{t('design.name')}</h3>
-                    {/* <p className="w-2/3">{t('design.shortDesc')}</p> */}
                     <SplitText
                         text={t('design.shortDesc')}
                         splitType="lines"
@@ -394,7 +394,6 @@ const Services = () => {
                 <div className="col-span-12 lg:col-span-4 flex flex-col justify-end gap-6 lg:gap-10 lg:row-start-3 pb-16 lg:pb-0">
                     <span className="tag small">03</span>
                     <h3>{t('development.name')}</h3>
-                    {/* <p className="w-2/3">{t('development.shortDesc')}</p> */}
                     <SplitText
                         text={t('development.shortDesc')}
                         splitType="lines"

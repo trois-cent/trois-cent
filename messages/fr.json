@@ -1,13 +1,16 @@
 {
-    "buttons": {
-        "services": "Services",
-        "projects": "Projets",
-        "bookACall": "Réserver un appel"
+    "lang": "fr",
+    "kw": {
+        "menu": "Menu",
+        "close": "Fermer",
+        "instagram": "Instagram",
+        "press": "Appuyez",
+        "release": "Relâchez"
     },
     "sectionTitles": {
         "services": {
             "tag": "Services",
-            "0": "De l'idée au lancement,",
+            "0": "De l'idée au lancement",
             "1": "on est avec vous."
         },
         "projects": {
@@ -16,9 +19,14 @@
             "1": "on donne notre 300%."
         },
         "contacts": {
-            "tag": "Contacts",
-            "0": "Prêt à commencer ?"
+            "tag": "Nous contacter",
+            "0": "Discutons de vos projets!"
         }
+    },
+    "ctas": {
+        "visitWebsite": "Visiter le site",
+        "bookCall": "Planifier un appel",
+        "sendEmail": "salut@troiscent.ca"
     },
     "branding": {
         "name": "Branding",
@@ -33,31 +41,31 @@
         "shortDesc": "Sites vitrines, e-commerce, applications web et mobiles -- on bâti la plateforme qui convertit vos visiteurs en clients."
     },
     "goals": {
-        "creation": "Création",
+        "creation": "Conception",
         "growth": "Croissance",
         "optimization": "Optimisation",
         "firstStep": "On établit les objectifs.",
-        "secondStep": "On les fracasse."
+        "secondStep": "On les réalise."
     },
     "copyrights": {
-        "text": "© 2025 - Trois Cent, s.e.n.c. Tous droits réservés.",
+        "text": "© 2025 - Trois Cent. Tous droits réservés.",
         "from": "Basé au Québec. Ouvert à l'international.",
-        "legal": "Mentions légales",
-        "cookies": "Gestion des cookies"
+        "cookies": "Cookies",
+        "privacy": "Confidentialité"
     },
     "cedres-3r": {
         "name": "Cèdres 3R",
-        "tags": "Branding,UX/UI"
+        "tags": "Branding,UX/UI",
+        "shortDesc": "Un rebranding complet pour Cèdres 3R, les experts en installation et entretien de cèdres en Mauricie."
     },
     "jo-barber": {
         "name": "Jo Barber",
-        "tags": "Branding"
+        "tags": "Branding",
+        "shortDesc": "Un branding moderne et humain, à l’image du service que Jo Barber offre chaque jour."
     },
     "athlete-x": {
         "name": "Athlete-X",
-        "tags": "Branding,UX/UI,Web App"
-    },
-    "hero": {
-        "desc": "On forge des marques et les solutions qui les transportent plus loin."
+        "tags": "Branding,UX/UI,Application Web",
+        "shortDesc": "D’une idée à une plateforme bien réelle, Athlete-X aide déjà de jeunes athlètes partout en Amérique du Nord à se démarquer et à se faire recruter, peu importe leur origine sociale ou économique."
     }
 }

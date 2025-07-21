@@ -5,8 +5,10 @@ import gsap from 'gsap'
 import { Button } from '../ui/buttons/button'
 import { useLenis } from 'lenis/react'
 import CallBooker from '../ui/CallBooker'
+import { useTranslations } from 'next-intl'
 
 const Hero = () => {
+    const t = useTranslations()
     const lenis = useLenis()
 
     const jumpTo = (section: 'projects' | 'services') => {
@@ -119,7 +121,7 @@ const Hero = () => {
             tl.revert()
             tl.kill()
         }
-    }, [])
+    }, [lenis])
 
     return (
         <section
@@ -138,7 +140,7 @@ const Hero = () => {
                         muted
                         loop
                         src="/showreel.mp4"
-                        poster='/showreel_poster.png'
+                        poster="/showreel_poster.png"
                         className="absolute z-10 left-0 top-0 w-full h-full object-cover"
                     />
                     <h1 className="relative z-10">
@@ -261,13 +263,13 @@ const Hero = () => {
                     <Button
                         className="hero-button opacity-0"
                         variant="blurred"
-                        text="Services"
+                        text={t('sectionTitles.services.tag')}
                         onClick={() => jumpTo('services')}
                     />
                     <Button
                         className="hero-button opacity-0 portrait:hidden"
                         variant="blurred"
-                        text="Projets"
+                        text={t('sectionTitles.projects.tag')}
                         onClick={() => jumpTo('projects')}
                     />
                     <CallBooker triggerClassname="hero-button opacity-0" />

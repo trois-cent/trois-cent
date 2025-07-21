@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { AnimatePresence, motion, useMotionValue, useSpring } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 
 const isTouchDevice = () => typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0)
 
@@ -12,6 +13,8 @@ interface HoverVideoProps {
 }
 
 export const HoverVideo: React.FC<HoverVideoProps> = ({ src, poster, className = '' }) => {
+    const t = useTranslations()
+    
     const videoRef = useRef<HTMLVideoElement | null>(null)
     const containerRef = useRef<HTMLDivElement | null>(null)
     const [isHovering, setIsHovering] = useState(false)
@@ -92,7 +95,6 @@ export const HoverVideo: React.FC<HoverVideoProps> = ({ src, poster, className =
                 muted
                 loop
                 playsInline
-                preload="auto"
                 style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                 onTapStart={() => {
                     onPress()
@@ -123,7 +125,7 @@ export const HoverVideo: React.FC<HoverVideoProps> = ({ src, poster, className =
                             userSelect: 'none',
                         }}
                     >
-                        {isPressed ? 'Release' : 'Press'}
+                        {isPressed ? t('kw.release') : t('kw.press')}
                     </motion.div>
                 )}
             </AnimatePresence>

@@ -24,9 +24,13 @@ const ContactUs = () => {
                 <div className="col-span-12 md:col-span-6 bg-off-white aspect-square rounded-lg flex items-center justify-center">
                     <Button
                         variant="off-white"
-                        text="Envoyer un message"
+                        text={t('ctas.sendEmail')}
                         icon={<ChevronRight size={14} />}
-                        onClick={() => (window.location.href = 'mailto:hi@troiscent.ca')}
+                        onClick={() =>
+                            (window.location.href = `${
+                                t('lang') === 'fr' ? 'mailto:salut@troiscent.ca' : 'mailto:hi@troiscent.ca'
+                            }`)
+                        }
                     />
                 </div>
             </div>

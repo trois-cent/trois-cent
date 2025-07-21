@@ -33,7 +33,7 @@ const Projects = () => {
         })
 
         return () => {
-            timelines.forEach(tl => tl.kill())
+            timelines.forEach(tl => tl.revert())
         }
     }, [])
 
@@ -53,13 +53,13 @@ const Projects = () => {
                 {/* Cèdres 3R */}
                 <div className="col-span-12 flex flex-col-reverse lg:grid grid-cols-2 gap-grid-gap">
                     <div className="flex items-center lg:justify-center">
-                        <div className="w-full max-w-[400px] space-y-8">
+                        <div className="w-full max-w-[400px] space-y-4">
                             <h3 className="">{t('cedres-3r.name')}</h3>
                             <ul className="flex gap-1">
                                 {t('cedres-3r.tags')
                                     .split(',')
                                     .map(tag => (
-                                        <li key={tag} className="tag">
+                                        <li key={tag} className="tag small">
                                             {tag.trim()}
                                         </li>
                                     ))}
@@ -78,17 +78,17 @@ const Projects = () => {
                 <div className="col-span-12 flex flex-col lg:grid grid-cols-2 gap-grid-gap">
                     <HoverVideo
                         src="/jb_stopmotion.mp4"
-                        poster="/jb_stopmotion_poster.jpg"
+                        poster="/jb_stopmotion_poster.png"
                         className="project-video rounded-lg w-full aspect-[4/5] xl:aspect-auto xl:h-[calc(100vh_-_var(--gutter)_*_2)]"
                     />
                     <div className="flex items-center lg:justify-center">
-                        <div className="w-full max-w-[400px] space-y-8">
+                        <div className="w-full max-w-[400px] space-y-4">
                             <h3 className="">{t('jo-barber.name')}</h3>
                             <ul className="flex gap-1">
                                 {t('jo-barber.tags')
                                     .split(',')
                                     .map(tag => (
-                                        <li key={tag} className="tag">
+                                        <li key={tag} className="tag small">
                                             {tag.trim()}
                                         </li>
                                     ))}
@@ -105,13 +105,13 @@ const Projects = () => {
                 {/* Athlete-X */}
                 <div className="col-span-12 flex flex-col-reverse lg:grid grid-cols-2 gap-grid-gap">
                     <div className="flex items-center lg:justify-center">
-                        <div className="w-full max-w-[400px] space-y-8">
+                        <div className="w-full max-w-[400px] space-y-4">
                             <div className="flex items-center justify-between">
                                 <h3 className="">{t('athlete-x.name')}</h3>
                                 <Button
                                     variant="black"
                                     size="small"
-                                    text="Visit Website"
+                                    text={t('ctas.visitWebsite')}
                                     onClick={() => window.open('https://athlete-x.io', '_blank')}
                                 />
                             </div>
@@ -119,7 +119,7 @@ const Projects = () => {
                                 {t('athlete-x.tags')
                                     .split(',')
                                     .map(tag => (
-                                        <li key={tag} className="tag">
+                                        <li key={tag} className="tag small">
                                             {tag.trim()}
                                         </li>
                                     ))}
@@ -135,7 +135,7 @@ const Projects = () => {
                     </div>
                     <HoverVideo
                         src="/ax_stopmotion.mp4"
-                        poster="/ax_stopmotion_poster.jpg"
+                        poster="/ax_stopmotion_poster.png"
                         className="project-video rounded-lg w-full aspect-square"
                     />
                 </div>

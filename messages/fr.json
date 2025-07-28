@@ -67,5 +67,13 @@
         "name": "Athlete-X",
         "tags": "Branding,UX/UI,Application Web",
         "shortDesc": "D’une idée à une plateforme bien réelle, Athlete-X aide déjà de jeunes athlètes partout en Amérique du Nord à se démarquer et à se faire recruter, peu importe leur origine sociale ou économique."
+    },
+    "privacy": {
+        "title": "Politique de confidentialité",
+        "p1": "Nous ne recueillons aucune information personnelle directement sur ce site.",
+        "p2": "Toutefois, lorsque vous utilisez notre outil de réservation de rendez-vous (fourni par Cal.com), certaines données personnelles peuvent être collectées par cette plateforme externe, notamment votre nom, votre courriel et votre disponibilité.",
+        "p3": "En utilisant le système de réservation, vous acceptez la politique de confidentialité de Cal.com. Pour en savoir plus, vous pouvez consulter leur politique ici :",
+        "p4": "Pour toute question concernant vos renseignements personnels, vous pouvez contacter notre responsable de la protection des renseignements :",
+        "updated": "Dernière mise à jour : Juillet 2025"
     }
 }

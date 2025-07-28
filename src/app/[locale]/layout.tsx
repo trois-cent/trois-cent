@@ -36,9 +36,6 @@ export default async function LocaleLayout({
 
     return (
         <html lang={locale} className={`${manrope.className} ${geistMono.className}`}>
-            {/* <head>
-                <link rel="icon" href="/favicon.ico" />
-            </head> */}
             <body className={`antialiased`}>
                 <NextIntlClientProvider>{children}</NextIntlClientProvider>
             </body>

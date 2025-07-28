@@ -16,9 +16,9 @@ const Footer = () => {
                 <p className="text-[9px] md:text-xs text-black opacity-45 leading-[1em]">{t('copyrights.text')}</p>
                 <div className="flex items-center gap-2">
                     <p className="text-[9px] md:text-xs text-black opacity-45 leading-[1em]">{t('copyrights.from')}</p>
-                    <button className="text-[9px] md:text-xs underline text-black opacity-45 leading-[1em]">
+                    {/* <button className="text-[9px] md:text-xs underline text-black opacity-45 leading-[1em]">
                         {t('copyrights.cookies')}
-                    </button>
+                    </button> */}
                     <Link
                         href="/privacy"
                         className="text-[9px] md:text-xs underline text-black opacity-45 leading-[1em]"
